@@ -1,6 +1,10 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.all {
+  margin: 0 auto;
+  width: 1000px;
+}
 .boundaries{
 	background: #ADFF2F; 
     padding: 10px;
@@ -16,13 +20,12 @@
 	vertical-align: top;
 	width: 380px;
 
-		.wtf{
-
-		}
+		
 		.title{
 			font-weight: bolder;
 			font-size: 30px;
 			margin-bottom: 14px;
+			text-align: center;
 		}
 
 		.description{
@@ -30,8 +33,70 @@
 			margin-bottom: 14px;
 		}
 
-}
-		.products {
-		  margin: 0 auto;
-		  width: 1000px;
+		.links_product{
+			text-align: center;
+			font-size: 15px;
+			font-weight: bold;
 		}
+
+		.price{
+			padding: 10px;
+			margin-bottom: 14px;
+			font-size: 15px;
+			float: left;
+		}
+		
+		.stock{
+			padding: 10px;
+			margin-bottom: 14px;
+			font-size: 15px;
+			float: right;
+		}
+}
+
+.all_show{
+	height: auto;
+	padding: 15px;
+	margin-bottom: 14px;
+	vertical-align: top;
+
+
+		.ps{
+			text-align: center;
+			
+			.price{
+				padding: 10px;
+				margin-bottom: 14px;
+				font-size: 15px;
+				float: left;
+			}
+			.stock{
+				padding: 10px;
+				margin-bottom: 14px;
+				font-size: 15px;
+				float: right;
+			}
+		}
+
+
+
+		.links{
+			text-align: center;
+		}
+
+		.comments{
+			padding: 10px;
+			margin-bottom: 14px;
+			vertical-align: top;
+			font-size: 18px;
+
+			.comment_text{
+				padding: 5px;
+				margin-top: 15px;
+				border-bottom: 1px solid black;
+			}
+		}
+
+
+
+}
