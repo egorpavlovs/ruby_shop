@@ -51,6 +51,7 @@
 			margin-bottom: 14px;
 			font-size: 15px;
 			float: right;
+			width: 20%;
 		}
 }
 
@@ -63,18 +64,23 @@
 
 		.ps{
 			text-align: center;
+			display: inline-block;
+			width: 100%;
 			
 			.price{
-				padding: 10px;
 				margin-bottom: 14px;
 				font-size: 15px;
 				float: left;
+				width: 50%;
+				text-align: left;
 			}
+
 			.stock{
-				padding: 10px;
 				margin-bottom: 14px;
 				font-size: 15px;
-				float: right;
+				float: left;
+				width: 50%;
+				text-align: right;
 			}
 		}
 
@@ -99,4 +105,10 @@
 
 
 
+}
+.forms_edit_new{
+	height: auto;
+	padding: 15px;
+	margin-bottom: 14px;
+	vertical-align: top;
 }
