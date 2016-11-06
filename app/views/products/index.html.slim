@@ -1,0 +1,11 @@
+.all
+  .boundaries = h1 Products
+
+  - @products.each do |product|
+    .all_products
+      .title = link_to product.title, product
+      .description = product.description
+      .price = "Цена: #{product.price} руб." 
+      .stock = "На складе: #{product.stock} шт."
+
+  .boundaries = link_to 'New Product', new_product_path

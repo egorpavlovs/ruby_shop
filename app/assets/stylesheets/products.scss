@@ -33,11 +33,6 @@
 			margin-bottom: 14px;
 		}
 
-		.links_product{
-			text-align: center;
-			font-size: 15px;
-			font-weight: bold;
-		}
 
 		.price{
 			padding: 10px;
@@ -52,6 +47,11 @@
 			font-size: 15px;
 			float: right;
 			width: 20%;
+		}
+		.links_product{
+			text-align: center;
+			font-size: 15px;
+			font-weight: bold;
 		}
 }
 
@@ -96,10 +96,13 @@
 			vertical-align: top;
 			font-size: 18px;
 
-			.comment_text{
+			.comment{
 				padding: 5px;
 				margin-top: 15px;
 				border-bottom: 1px solid black;
+			}
+			.name_commentator{
+				
 			}
 		}
 

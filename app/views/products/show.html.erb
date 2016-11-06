@@ -47,7 +47,10 @@
     <div class="comments">
       <body>
         <% @product.comments.each do |comment| %>
-          <div class="comment_text">
+          <div class="comment">
+            <div class="name_commentator">
+              <td><%= comment.name_commentator %></td><text>:</text>
+            </div>
             <td><%= comment.text %></td>
             <!-- <td><%= comment.product_id %></td>
             <td><%= link_to 'Show', comment %></td> -->
