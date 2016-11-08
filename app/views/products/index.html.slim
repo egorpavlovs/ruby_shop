@@ -9,4 +9,4 @@
       .price = "Цена: #{product.price} руб." 
       .stock = "На складе: #{product.stock} шт."
 
-  .boundaries = link_to 'New Product', new_product_path
+  .boundaries = link_to 'New Product', new_product_path if current_user.administrator?

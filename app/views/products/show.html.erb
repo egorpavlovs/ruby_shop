@@ -37,13 +37,7 @@
   <%= render 'comments/form', comment: @comment, product: @product %>
 
 
-    <!-- <thead>
-      <tr>
-        <th>Text</th>
-        <th>Product</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead> -->
+    
     <div class="comments">
       <body>
         <% @product.comments.each do |comment| %>
@@ -52,10 +46,6 @@
               <td><%= comment.name_commentator %></td><text>:</text>
             </div>
             <td><%= comment.text %></td>
-            <!-- <td><%= comment.product_id %></td>
-            <td><%= link_to 'Show', comment %></td> -->
-            <!-- <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-            <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
           </div>
         <% end %>
       </body>

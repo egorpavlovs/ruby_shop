@@ -8,6 +8,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <!-- TODO: добавить выход из регистрации, если зарегистрирован и ссылка на регистрацию, если нет! bin/rails routes показать все нужные методы -->
+   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+
+
   <body>
     <%= yield %>
   </body>

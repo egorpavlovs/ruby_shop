@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7e0b6cd-bf4c-4098-a6c3-4e1fba2fb50d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/_product.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/products/_product.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/index.html.slim" afterPath="$PROJECT_DIR$/app/views/products/index.html.slim" />
-    </list>
+    <list default="true" id="d7e0b6cd-bf4c-4098-a6c3-4e1fba2fb50d" name="Default" comment="" />
     <ignored path="shop.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -425,7 +418,7 @@
       <workItem from="1478072391052" duration="614000" />
       <workItem from="1478167920825" duration="67000" />
       <workItem from="1478430677492" duration="933000" />
-      <workItem from="1478608717111" duration="10000" />
+      <workItem from="1478608717111" duration="367000" />
     </task>
     <task id="LOCAL-00001" summary="commit shop">
       <created>1477857376572</created>
@@ -459,7 +452,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11988000" />
+    <option name="totallyTimeSpent" value="12345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1309" height="744" extended-state="6" />
