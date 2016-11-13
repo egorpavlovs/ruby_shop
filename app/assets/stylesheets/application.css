@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ .link{
+	  width: 980px;
+ 		padding: 10px;
+    font-weight: bolder;
+    margin: auto;
+ }

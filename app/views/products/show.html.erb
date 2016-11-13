@@ -34,7 +34,6 @@
     <%= link_to 'Back', products_path %>
   </div>
 
-  <%= render 'comments/form', comment: @comment, product: @product %>
 
 
     
@@ -42,14 +41,12 @@
       <body>
         <% @product.comments.each do |comment| %>
           <div class="comment">
-            <div class="name_commentator">
-              <td><%= comment.name_commentator %></td><text>:</text>
-            </div>
             <td><%= comment.text %></td>
           </div>
         <% end %>
       </body>
     </div>
   </div>
+  <%= render 'comments/form', comment: @comment, product: @product %>
 
 </div>
