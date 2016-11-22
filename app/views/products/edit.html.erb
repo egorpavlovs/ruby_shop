@@ -1,10 +1,13 @@
 <div class="all">
-	<div class="boundaries"><h1>Editing Product</h1></div>
-	<div class="forms_edit_new">
-		<%= render 'form', product: @product %>
-	</div>
-	<div align="center">
-		<%= link_to 'Show', @product %> |
-		<%= link_to 'Back', products_path %>
+	<div class="boundaries"><h1>Editing Product</h1>
+	<div class="callout">
+		<div class="forms_edit_new">
+			<%= render 'form', product: @product %>
+		</div>
+		<div align="center">
+			<%= link_to 'Show', @product %> |
+			<%= link_to 'Back', products_path %>
+		</div>
+		</div>
 	</div>
 </div>
