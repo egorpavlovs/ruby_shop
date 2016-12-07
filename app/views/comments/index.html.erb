@@ -14,7 +14,6 @@
   <tbody>
     <% @comments.each do |comment| %>
       <tr>
-        <td><%= comment.name_commentator %></td>
         <td><%= comment.text %></td>
         <td><%= comment.product_id %></td>
         <td><%= link_to 'Show', comment %></td>
@@ -27,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Comment', new_comment_path %>
+<%= link_to 'New Comment', new_comment_path, class: hollow button %>

@@ -1,15 +1,10 @@
-<div class="all">
 <div class="medium-6 columns">
-	<div class="boundaries"><h1>Editing Product</h1>
-	<div class="callout">
+	<h2>Editing Product</h2>
 		<div class="forms_edit_new">
 			<%= render 'form', product: @product %>
 		</div>
 		<div align="center">
-			<%= link_to 'Show', @product %> |
-			<%= link_to 'Back', products_path %>
-		</div>
-		</div>
+			<%= link_to 'Show', @product, class: "hollow tiny button" %> 
+			<%= link_to 'Back', products_path, class: "hollow tiny button" %>
 	</div>
-</div>
 </div>

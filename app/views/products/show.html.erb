@@ -1,16 +1,10 @@
-<div class="all">
 <p id="notice"><%= notice %></p>
     <div class="medium-6 columns">
-
-
-<div class="boundaries">
-  <h1>
-    <!-- <strong>Title:</strong> -->
+  <h1 align="center">
     <%= @product.title %>
   </h1>
 
 <div class="all_show">
-  <div class="callout">
   <p>
     <%= @product.description %>
   </p>
@@ -31,33 +25,18 @@
     </div>
   </div>
   
-  <div class="links">
-  <!-- как переделать в button_link (button_to "edit") -->
-    <%= link_to 'Edit', edit_product_path(@product) %> |
-    <%= link_to 'Back', products_path %>
+  <div align="center">
+    <%= link_to 'Edit', edit_product_path(@product), class: "hollow tiny button" %>
+    <%= link_to 'Back', products_path, class: "hollow tiny button" %>
   </div>
 </div>
   </div>
-  </div>
-
-
-
 </div>
-    <div class="medium-6 columns">
-
-<div class="callout">
-    <div class="comments">
-      <body>
-        <% @product.comments.each do |comment| %>
-          <div class="comment">
-            <%= comment.text %>
-          </div>
-        <% end %>
-      </body>
-    </div>
-  <%= render 'comments/form', comment: @comment, product: @product %>
+<div class="medium-6 columns comments">
+  <% @product.comments.each do |comment| %>
+  <div class="comment callout">
+    <%= comment.text %>
   </div>
-</div>
-    
-
+  <% end %>
+<%= render 'comments/form', comment: @comment, product: @product %>
 </div>

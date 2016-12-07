@@ -1,14 +1,7 @@
 .row
-.all
-  .boundaries
-    h1 Products
-
-	.callout
-	  - @products.each do |product|
-		    .all_products
-			      .title = link_to product.title, product
-			      .description = product.description
-			      .price = "Цена: #{product.price} руб." 
-			      .stock = "На складе: #{product.stock} шт."
-
-  	= link_to 'New Product', new_product_path if current_user.administrator?
+   - @products.each do |product|
+	    .all_products
+		     .title = link_to product.title, product
+		     .description = product.truncated_description
+		     .price = product.price 
+		     .stock = "На складе: #{product.stock} шт."
