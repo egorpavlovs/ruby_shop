@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
   def index
     # binding.pry
     @products = Product.all
+    @products = @products.where("title ILIKE ?", "%#{params[:search]}%") if params[:search]
   end
 
   # GET /products/1
