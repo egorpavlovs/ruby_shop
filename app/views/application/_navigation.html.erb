@@ -7,7 +7,7 @@
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
     <!-- , root_path -->
-      <li class="menu-text"><%= link_to "Shop" %></li>
+      <li class="menu-text"><%= link_to "Shop", products_path %></li>
       <li class="has-submenu">
         <a href="#">Categories</a>
         <ul class="submenu menu vertical" data-submenu>
@@ -16,14 +16,17 @@
           <li><a href="#0">Three</a></li>
         </ul>
       </li>
-      <li><%= link_to 'New Product', new_product_path if user_signed_in? and  current_user.administrator? %></li>
+      <li><%= link_to 'New Product', new_product_path if user_signed_in? &&  current_user.administrator? %></li>
       <li><%= link_to "Sign out", destroy_user_session_path, method: :delete if user_signed_in? %></li>
     </ul>
   </div>
   <div class="top-bar-right">
     <ul class="menu">
-      <li><%= form_tag products_path, method: :get %></li>
-      <li><%= text_field_tag :search, params[:search], placeholder: "Search" %></li>
+       <li>
+        <%= form_tag products_path, method: :get do -%>
+          <%= text_field_tag :search, params[:search], placeholder: "Search" %>
+        <% end -%>
+      </li>
     </ul>
   </div>
 </div>
