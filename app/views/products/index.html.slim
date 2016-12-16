@@ -5,8 +5,8 @@
 	  h3 All products
 	.all_products
 	  - @products.each do |product|
-	  	.all_products
-		   .title = link_to product.title, product
-		   .description = product.truncated_description
-		   .price = product.price 
-		   .stock = product.stock
+	  		.all_products
+		  		.title = link_to product.title, product
+		  		.description = product.description
+		  		.price = product.price 
+		  		.stock = product.stock
