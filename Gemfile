@@ -33,7 +33,7 @@ gem 'foundation-rails'
 
 gem 'decent_exposure', '3.0.0'
 gem 'decent_decoration', '~> 0.1.0'
-gem 'draper'
+gem 'draper', github: 'audionerd/draper', branch: 'rails5'
 gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
 
 group :development, :test do
