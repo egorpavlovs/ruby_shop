@@ -4,9 +4,9 @@
 	- else
 	  h3 All products
 	.all_products
-	  - @products.each do |product|
+	  - products.each do |product|
 	  		.all_products
 		  		.title = link_to product.title, product
-		  		.description = product.description
+		  		.description = product.truncated_description
 		  		.price = product.price 
-		  		.stock = product.stock
+		  		.stock = product.current_stock

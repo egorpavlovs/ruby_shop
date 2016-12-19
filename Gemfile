@@ -31,6 +31,11 @@ gem 'devise'
 
 gem 'foundation-rails'
 
+gem 'decent_exposure', '3.0.0'
+gem 'decent_decoration', '~> 0.1.0'
+gem 'draper'
+gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
