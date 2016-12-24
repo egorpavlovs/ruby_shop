@@ -1,0 +1,25 @@
+p#notice
+  = notice
+.medium-6.columns
+  h1[align="center"]
+    = product.title
+  .all_show
+    = image_tag "no-image"
+    p
+      = product.description
+    .ps
+      .price
+        h5 Цена
+        = product.price
+      .stock
+        h5 На складе
+        = product.current_stock
+    div[align="center"]
+      = link_to 'Edit', edit_product_path(product), class: "hollow tiny button"
+      = link_to 'Back', products_path, class: "hollow tiny button"
+      = link_to 'Delete', product, method: :delete, class: "hollow tiny button"
+.medium-6.columns.comments
+  - product.comments.each do |comment|
+    .comment.callout
+      = comment.text
+  = render 'comments/form', product: product 

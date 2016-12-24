@@ -22,6 +22,10 @@
               | Three
       li
         = link_to 'New Product', new_product_path if user_signed_in? &&  current_user.administrator?
+
+      li 
+        a href="#" Cart
+
       li
         = link_to "Sign out", destroy_user_session_path, method: :delete if user_signed_in?
   .top-bar-right
@@ -29,3 +33,6 @@
       li
         = form_tag products_path, method: :get do
           = text_field_tag :search, params[:search], placeholder: "Search"
+
+      li
+        = submit_tag "Search", class: "button"

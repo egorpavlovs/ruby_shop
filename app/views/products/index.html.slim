@@ -7,6 +7,7 @@
 	  - products.each do |product|
 	  		.all_products
 		  		.title = link_to product.title, product
+		  		.images = image_tag "no-image"
 		  		.description = product.truncated_description
 		  		.price = product.price 
 		  		.stock = product.current_stock
