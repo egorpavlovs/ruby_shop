@@ -24,7 +24,8 @@
         = link_to 'New Product', new_product_path if user_signed_in? &&  current_user.administrator?
 
       li 
-        a href="#" Cart
+        = link_to cart_products_path do
+         = "Корзина (#{ session[:cart] ? session[:cart].uniq.size : "Пусто" })"
 
       li
         = link_to "Sign out", destroy_user_session_path, method: :delete if user_signed_in?

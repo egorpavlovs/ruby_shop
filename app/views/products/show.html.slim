@@ -19,7 +19,14 @@ p#notice
       = link_to 'Back', products_path, class: "hollow tiny button"
       = link_to 'Delete', product, method: :delete, class: "hollow tiny button"
 .medium-6.columns.comments
-  - product.comments.each do |comment|
-    .comment.callout
-      = comment.text
+  - if product.comments_exists?
+    - product.comments.each do |comment|
+      .comment.callout
+        
+            = comment.text
+  -else
+          .callout
+            h5 Комментариев нет
+
   = render 'comments/form', product: product 
+

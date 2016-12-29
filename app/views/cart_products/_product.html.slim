@@ -1,0 +1,14 @@
+.all_products
+  .title
+    = link_to product.title, product
+  .description
+    = product.description
+  .price
+    = product.price
+  .actions
+    = link_to "УДАЛИТЬ ИЗ КОРЗИНЫ",
+              cart_product_path(product.id),
+              method: :delete,
+              class: "hollow button"
+  .stock
+    = product.current_stock

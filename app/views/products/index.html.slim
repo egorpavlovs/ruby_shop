@@ -11,4 +11,4 @@
 		  		.description = product.truncated_description
 		  		.price = product.price 
 		  		.stock = product.current_stock
-		  		.actions = link_to "В КОРЗИНУ", "", class: "hollow small button"
+		  		.actions = link_to "В корзину", new_cart_product_path(product_id: product.id), class: "hollow button"
