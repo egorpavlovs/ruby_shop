@@ -19,7 +19,7 @@ class CartProductsController < ApplicationController
   end
 
   def index
-  	binding.pry
+
   end
   
 end
