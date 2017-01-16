@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_user!, exept: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]
 
   expose_decorated :product
   expose_decorated :products, -> { fetch_products }
