@@ -11,13 +11,17 @@ p#notice
       .price
         h5 Цена
         = product.price
+        h5 Цена за партию
+        = product.price_lot
       .stock
         h5 На складе
         = product.current_stock
     div[align="center"]
-      = link_to 'Edit', edit_product_path(product), class: "hollow tiny button"
       = link_to 'Back', products_path, class: "hollow tiny button"
-      = link_to 'Delete', product, method: :delete, class: "hollow tiny button"
+      - if current_user.administrator? || current_user.manager?
+        = link_to 'Edit', edit_product_path(product), class: "hollow tiny button"
+      - if current_user.administrator?
+        = link_to 'Delete', product, method: :delete, class: "hollow tiny button"
 .medium-6.columns.comments
   - if product.comments_exists?
     - product.comments.each do |comment|

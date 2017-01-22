@@ -23,9 +23,14 @@ ActiveRecord::Schema.define(version: 20170116174251) do
   end
 
   create_table "ordered_products", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "orders", force: :cascade do |t|
+    t.integer "user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -35,6 +40,7 @@ ActiveRecord::Schema.define(version: 20170116174251) do
     t.datetime "updated_at",  null: false
     t.integer  "price"
     t.integer  "stock"
+    t.integer  "price_lot"
   end
 
   create_table "users", force: :cascade do |t|
