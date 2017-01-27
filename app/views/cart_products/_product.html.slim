@@ -6,9 +6,6 @@
   .price
     = product.price
   .actions
-    = link_to "УДАЛИТЬ ИЗ КОРЗИНЫ",
-              cart_product_path(product.id),
-              method: :delete,
-              class: "hollow button"
+    = link_to "Удалить из корзины", cart_product_path(product.id), method: :delete, class: "hollow button"
   .stock
     = product.current_stock

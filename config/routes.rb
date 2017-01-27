@@ -9,6 +9,8 @@ Rails.application.routes.draw do
  
 	# root to: "products#index"
 
+	resources :ordered_products, only: [:index, :new, :destroy]
+
   resources :orders, only: [:new, :index]
 
 
