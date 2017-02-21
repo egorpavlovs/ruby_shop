@@ -21,8 +21,14 @@
     = f.label :stock
     = f.number_field :stock
   .field
-    - if current_user.administrator?
+    - if current_user.administrator?  
       = f.label :price_lot
       = f.number_field :price_lot
+  .field
+     = f.label :color
+     = f.text_field :color
+  .field
+    = f.label :weight
+    = f.number_field :weight
   .actions
     = f.submit class: "hollow button"

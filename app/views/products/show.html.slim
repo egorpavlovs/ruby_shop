@@ -1,36 +1,47 @@
-p#notice
-  = notice
-.medium-6.columns
-  h1[align="center"]
-    = product.title
-  .all_show
-    .images = image_tag "no-image"
-    p
-      = product.description
-    .ps
-      .price
-        h5 Цена
-        = product.price
-        h5 Цена за партию
-        = product.price_lot
-      .stock
-        h5 На складе
-        = product.current_stock
-    div[align="center"]
-      = link_to 'Back', products_path, class: "hollow tiny button"
-      - if current_user.administrator? || current_user.manager?
-        = link_to 'Edit', edit_product_path(product), class: "hollow tiny button"
-      - if current_user.administrator?
-        = link_to 'Delete', product, method: :delete, class: "hollow tiny button"
-.medium-6.columns.comments
-  - if product.comments_exists?
-    - product.comments.each do |comment|
-      .comment.callout
-        
-            = comment.text
-  -else
-          .callout
-            h5 Комментариев нет
-
-  = render 'comments/form', product: product 
+.row
+  .medium-6.columns
+    h1[align="center"]
+      = product.title
+    .all_show
+      .images = image_tag "no-image"
+      .description 
+        h5 Цвет:
+        = product.color
+        h5 Вес:
+        = product.weight
+        h5 Описание:
+        = product.description
+      .ps
+        .price
+          h5 Цена
+          = product.price
+          - if user_signed_in? && current_user.administrator? 
+            h5 Цена за партию
+            = product.price_lot
+        .stock
+          h5 На складе
+          = product.current_stock
+      div[align="center"]
+        = link_to 'Back', products_path, class: "hollow tiny button"
+        - if user_signed_in? && current_user.administrator?
+          = link_to 'Edit', edit_product_path(product), class: "hollow tiny button"
+        - if user_signed_in? && (current_user.administrator? || current_user.manager?)
+          = link_to 'Delete', product, method: :delete, class: "hollow tiny button"
+  
+.row
+  .medium-6.columns.comments
+    - if product.comments_exists?
+      h6 Комментарии:
+      - product.comments.each do |comment|
+        .comment.callout
+          
+              = comment.text
+    -else
+            .callout
+              h5 Комментариев нет
+    - if user_signed_in? 
+      = render 'comments/form', product: product 
+    - else
+      .callout.warning 
+        h5 Войдите в аккаунт, чтобы оставлять комментарии!
 

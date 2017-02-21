@@ -5,10 +5,15 @@
 	  h3 All products
 	.all_products
 	  - products.each do |product|
-	  		.all_products
-		  		.title = link_to product.title, product
-		  		.images = image_tag "no-image"
-		  		.description = product.truncated_description
-		  		.price = product.price 
-		  		.stock = product.current_stock
-		  		.actions = link_to "В корзину", new_cart_product_path(product_id: product.id), class: "hollow button"
+				/ - if ((product.current_stock > 0) || (current_user.administrator? || current_user.manager?))
+				.all_products
+					.title = link_to product.title, product
+					.images = image_tag "no-image"
+					.description = product.truncated_description
+					.price 
+						h5 Price
+						= product.price 
+					.stock	
+						h5 On stock
+						= product.current_stock
+					.actions = link_to "В корзину", new_cart_product_path(product_id: product.id), class: "hollow button"

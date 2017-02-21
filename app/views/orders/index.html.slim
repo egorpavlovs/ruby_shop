@@ -1,4 +1,7 @@
 .row
-	medium-12.columns
-		h3 Ваши заказы
-		= render collection: products, partial: "orders/product"
+	.medium-12.columns
+		h5 Покупатели
+		-@orders.each do |order|
+			= order.user_id
+
+			/ выводит просто числа, что логично. Потом сделать заказы авторизованного юзера

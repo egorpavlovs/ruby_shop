@@ -2,17 +2,15 @@ class CommentsController < ApplicationController
 
   before_action :authenticate_user!
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_product, only: [:create]
   # GET /comments
   # GET /comments.json
-  def index
-    @comments = Comment.all
-  end
+  # def index
+  #   @comments = Comment.all
+  # end
 
   # GET /comments/1
   # GET /comments/1.json
-  def show
-  end
 
   # GET /comments/new
   def new
@@ -20,18 +18,17 @@ class CommentsController < ApplicationController
   end
 
   # GET /comments/1/edit
-  def edit
-  end
+  
 
   # POST /comments
   # POST /comments.json
   def create
-    @comment = Comment.new(comment_params)
+    @comment = @product.comments.new(comment_params)
 
     
     @comment.save
     
-    redirect_to :back
+    
   end
 
  
@@ -48,8 +45,13 @@ class CommentsController < ApplicationController
       @comment = Comment.find(params[:id])
     end
 
+    def set_product
+      @product = Product.find(params[:product_id])
+      
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:text, :product_id)
+      params.require(:comment).permit(:product_id, :text)
     end
 end
