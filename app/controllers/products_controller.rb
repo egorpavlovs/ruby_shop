@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   
-  expose :comment, -> { Comments.new }
+  expose :comment, -> { Comment.new }
 
   def index 
   end
