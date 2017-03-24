@@ -1,7 +1,7 @@
 .row
 	.medium-12.columns
-		h5 Покупатели
+		h5 Заказы
 		-@orders.each do |order|
-			= order.user_id
+			= order.id
 
 			/ выводит просто числа, что логично. Потом сделать заказы авторизованного юзера

@@ -2,13 +2,15 @@
 	.medium-12.columns
 		h3 Заказы
 	.all_products
+		- @orders.each do |order|
 			- @ordered_products.each do |ordered_product|
-				.callout
-					h5 ID продукта
-					= ordered_product.product_id
-					h5 ID покупателя
-					= ordered_product.order_id
-					.actions
-						- if user_signed_in? && current_user.manager?
-							= link_to 'Destroy', ordered_product, method: :delete, class: "button small"
+				- if user_signed_in? && ((current_user.id == order.user_id && order.id == ordered_product.order_id) || current_user.manager?)
+					.callout
+						h5 ID продукта
+						= ordered_product.product_id
+						h5 ID покупателя
+						= ordered_product.order_id
+						.actions
+							- if current_user.manager?
+								= link_to 'Destroy', ordered_product, method: :delete, class: "button small"
 

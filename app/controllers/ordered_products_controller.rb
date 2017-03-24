@@ -4,10 +4,12 @@ class OrderedProductsController < ApplicationController
 
 	def index
 		@ordered_products = OrderedProduct.all
+		@orders = Order.all
 	end
 
 	def destroy
 		@ordered_product.destroy
+		redirect_to products_url, notice: 'Product was successfully destroyed.'
 	end
 
 
@@ -18,4 +20,4 @@ class OrderedProductsController < ApplicationController
 			redirect_to ordered_products_url, notice: 'Ordered product was successfully destroyed.'
 		end
 
-end	
+end
