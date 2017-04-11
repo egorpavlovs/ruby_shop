@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :orders, ActiveAdmin::Devise.config
+  devise_for :products, ActiveAdmin::Devise.config
   devise_for :users
+
+  ActiveAdmin.routes(self)
+  
   resources :comments
   resources :products
 

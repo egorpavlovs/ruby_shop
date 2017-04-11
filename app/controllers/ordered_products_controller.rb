@@ -4,7 +4,6 @@ class OrderedProductsController < ApplicationController
 
 	def index
 		@ordered_products = OrderedProduct.all
-		@orders = Order.all
 	end
 
 	def destroy
